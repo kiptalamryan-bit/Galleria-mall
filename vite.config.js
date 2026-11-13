@@ -1,26 +1,16 @@
-import { defineConfig } from 'vite';
+import { resolve } from 'path';
 
-export default defineConfig({
-  root: '.',
-  publicDir: 'public',
+export default {
+  root: resolve(__dirname, '.'),
+
+  // Change the base path to your repository name
+  base: '/Galleria-mall/',
+
   build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-    emptyOutDir: true,
-    rollupOptions: {
-      input: {
-        main: './index.html'
-      }
-    }
+    outDir: 'dist'
   },
+
   server: {
-    port: 3000,
-    open: true,
-    host: true
-  },
-  preview: {
-    port: 4173,
-    open: true,
-    host: true
+    port: 8080
   }
-});
+};
