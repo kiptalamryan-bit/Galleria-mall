@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Galleria Mall - Premium Shopping, Dining & Entertainment Destination" />
+    <title>Galleria Mall | Shopping, Dining & Entertainment</title>
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Bootstrap CSS (fallback) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <!-- TypeScript loaded at runtime, but we include a fallback to ensure the app renders -->
+    <script type="module">
+        // This script dynamically loads the built app
+        // The built JS file is deployed to dist/assets/index-*.js by the GitHub Actions workflow
+        // We use import() to dynamically import the built module
+        async function loadApp() {
+            try {
+                // Try to load the built JS file
+                // Using a wildcard pattern to match any fingerprinted filename
+                const response = await fetch('./assets/index-*.js.map');
+                if (response.ok) {
+                    // If .map file exists, the built assets are present
+                    const mainJsUrl = './assets/index-*.js';
+                    // Use import() to dynamically import the main JS module
+                    const module = await import(mainJsUrl);
+                    return module;
+                }
+            } catch (e) {
+                console.warn('Dynamic import failed:', e);
+            }
+            // Fallback: try to load a generic main.js (for local development)
+            return await import('./src/js/main.js');
+        }
+        loadApp();
+    </script>
+</head>
+<body>
+    <!-- The SPA will be rendered here -->
+    <div id="app"></div>
+</body>
+</html>
