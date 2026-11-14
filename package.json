@@ -14,7 +14,6 @@
   "homepage": "https://github.com/kiptalamryan-bit/Galleria-mall#readme",
   "devDependencies": {
     "gh-pages": "^6.3.0",
-    "sass": "^1.108.2",
     "vite": "^5.4.21"
   },
   "keywords": [
@@ -30,7 +29,6 @@
     "@floating-ui/dom": "^1.8.0",
     "array-union": "^2.1.0",
     "async": "^3.2.6",
-    "bootstrap": "^5.3.9",
     "braces": "^3.0.3",
     "commander": "^13.1.0",
     "commondir": "^1.0.1",
