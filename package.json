@@ -11,9 +11,9 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://kiptalamryan-bit.github.io/Galleria-mall/",
+  "homepage": "https://github.com/kiptalamryan-bit/Galleria-mall#readme",
   "devDependencies": {
-    "gh-pages": "^6.1.0",
+    "gh-pages": "^6.3.0",
     "sass": "^1.108.2",
     "vite": "^5.4.21"
   },
@@ -87,6 +87,5 @@
   },
   "bugs": {
     "url": "https://github.com/kiptalamryan-bit/Galleria-mall/issues"
-  },
-  "homepage": "https://github.com/kiptalamryan-bit/Galleria-mall#readme"
+  }
 }
