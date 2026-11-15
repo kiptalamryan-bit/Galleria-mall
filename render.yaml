@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: galleria-mall-backend
+    env: node
+    plan: free
+    region: oregon
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
+      - key: FRONTEND_URL
+        fromService:
+          type: web
+          name: galleria-mall-frontend
+          property: url
