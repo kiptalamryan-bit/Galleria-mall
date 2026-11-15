@@ -314,6 +314,11 @@ a:hover { color: var(--brand-accent-dark); }
 .footer .footer-col .newsletter button:hover { background: var(--brand-accent-dark); }
 
 /* ========================================
+.navbar.scrolled {
+    box-shadow: var(--shadow-md);
+    background: rgba(var(--bg-primary-rgb, 250, 248, 244), 0.95);
+    backdrop-filter: blur(10px);
+}
    BUTTON LOADING STATE
    ======================================== */
 .btn--loading {
